@@ -1,0 +1,41 @@
+.recomendation {
+}
+.container {
+}
+.row {
+}
+.recomendation-content {
+}
+.col-md-6 {
+}
+.recomendation-left {
+	margin-bottom: 20px;
+	&_img {
+		& img {
+			width: 100%;
+		}
+	}
+}
+
+.recomendation-right {
+}
+.recomendation-top {
+	& img {
+		width: 100%;
+	}
+}
+.recomendation-bottom {
+	margin-top: 40px;
+}
+.recomendation-subtitle {
+}
+
+.recomendation-title {
+}
+
+.recomendation-text {
+	font-family: Roboto;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 300;
+}
