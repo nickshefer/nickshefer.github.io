@@ -5,6 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
 			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.css"
+			integrity="sha512-8L/PDtOcxXEvVD1mWAzCBco7FQ/AHyG/bhg7yQpekicDmRwZA/iNDKpn+MJkYNEVg+qSLkxWLjsHtK781oAaWw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
 			integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
 			crossorigin="anonymous"
@@ -24,16 +31,26 @@
 			<div class="container">
 				<div class="header-content">
 					<div class="header-logo">
-						<img src="./assets/logo.svg" alt="logo" />
+						<a href="#main">
+							<img src="./assets/logo.svg" alt="logo" />
+						</a>
 					</div>
 					<nav class="header-nav">
 						<ul class="header-list">
 							<li><a href="#" class="header-link">О компании</a></li>
-							<li><a href="#" class="header-link">Каталог</a></li>
+							<li><a href="#catalog" class="header-link">Каталог</a></li>
 							<li><a href="#" class="header-link">Отзывы</a></li>
 							<li><a href="#" class="header-link">Преимущества</a></li>
-							<li><a href="#" class="header-link">Как выбрать</a></li>
-							<li><a href="#" class="header-link">Контакты</a></li>
+							<li>
+								<a href="#recomendation" class="header-link">Как выбрать</a>
+							</li>
+							<li>
+								<a
+									href="https://wa.me/79138545404?text=Здравствуйте,%20интересует%20ваше%20объявление%20о%20продаже%20машины."
+									class="header-link"
+									>Whatsapp</a
+								>
+							</li>
 						</ul>
 					</nav>
 					<div class="header-burger">
@@ -42,12 +59,20 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- Hero -->
-		<section class="hero hero-bg">
+		<section class="hero hero-bg" id="main">
 			<div class="container hero-container">
 				<div class="hero-content">
 					<h1 class="hero-title">
-						Продажа газовых котлов для воды и отопления в
+						<div class="swiper slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide slider_item">Продажа</div>
+								<div class="swiper-slide slider_item">Монтаж</div>
+								<div class="swiper-slide slider_item">Обслуживание</div>
+							</div>
+						</div>
+						газовых котлов в
 						<strong>Каргаске</strong>
 					</h1>
 					<p class="hero-subtitle">от ведущих производителей</p>
@@ -95,7 +120,7 @@
 		</section>
 
 		<!-- recomendation -->
-		<section class="recomendation">
+		<section class="recomendation" id="recomendation">
 			<div class="container">
 				<div class="row recomendation-content">
 					<div class="col-md-6 recomendation-left">
@@ -129,12 +154,26 @@
 			</div>
 		</section>
 
+		<!-- catalog -->
+		<section class="catalog" id="catalog">
+			<div class="container">
+				<h6 class="catalog-subtitle subtitle">каталог</h6>
+				<h2 class="catalog-title title">Каталог газовых котел</h2>
+				<div class="catalog-content row">
+					<div class="col-md-6"></div>
+					<div class="col-md-6"></div>
+				</div>
+			</div>
+		</section>
+
 		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"
+			integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA=="
 			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
 		></script>
 
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 		<script src="./index.js"></script>
 	</body>
 </html>

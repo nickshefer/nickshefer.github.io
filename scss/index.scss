@@ -4,6 +4,7 @@
 @import '_hero';
 @import '_reliability';
 @import '_recomendation';
+@import '_catalog';
 
 body {
 	font-family: 'Roboto';
@@ -17,7 +18,7 @@ a {
 	color: #fff;
 }
 section {
-	margin-top: 80px;
+	padding-top: 80px;
 }
 h1,
 h2,
@@ -41,6 +42,7 @@ h6 {
 	font-family: Montserrat;
 	font-size: 36px;
 	font-weight: 500;
+	margin-top: 10px;
 }
 .hidden {
 	overflow: hidden;

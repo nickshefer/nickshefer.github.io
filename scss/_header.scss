@@ -67,10 +67,15 @@
 	}
 	&.active {
 		&::before {
-			transform: translateY(9px);
+			transform: rotate(-45deg);
+			top: 9px;
 		}
 		&::after {
-			transform: translateY(-9px);
+			transform: rotate(45deg);
+			bottom: 9px;
+		}
+		& span {
+			opacity: 0;
 		}
 	}
 }
@@ -98,6 +103,7 @@
 	.header-list {
 		margin-top: 70px;
 		flex-direction: column;
+		font-size: 20px;
 	}
 	.header-link {
 		padding: 5px 150px 5px 10px;

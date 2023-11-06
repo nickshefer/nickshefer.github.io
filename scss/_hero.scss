@@ -1,5 +1,5 @@
 .hero {
-	margin-top: 60px;
+	padding-top: 60px;
 }
 .hero-container {
 	position: relative;
@@ -56,5 +56,22 @@
 	}
 	.hero-btn {
 		width: 100%;
+	}
+	.slider {
+		height: 37px;
+	}
+}
+
+.slider {
+	// border-radius: 5px;
+	font-weight: 900;
+	display: inline-block;
+	background: #ffffff;
+	height: 40px;
+	&_item {
+		color: #2c2c2c;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
