@@ -5,6 +5,7 @@
 @import '_reliability';
 @import '_recomendation';
 @import '_catalog';
+@import '_popup';
 
 body {
 	font-family: 'Roboto';
@@ -48,6 +49,7 @@ h6 {
 	overflow: hidden;
 }
 .btn {
+	cursor: pointer;
 	border: none;
 	outline: none;
 	color: #fff;
