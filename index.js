@@ -4,6 +4,7 @@ const menu = document.querySelector('.header-nav');
 document.addEventListener('click', e => {
 	if (burger === e.target) {
 		menu.classList.toggle('active');
+		burger.classList.toggle('active');
 		document.body.classList.toggle('hidden');
 	} else if (
 		e.target.closest('.header-nav') ||
@@ -20,14 +21,18 @@ document.addEventListener('click', e => {
 const links = document.querySelectorAll('a');
 links.forEach(link => {
 	link.addEventListener('click', e => {
-		if (link.textContent != 'Whatsapp') {
-			e.preventDefault();
-			let id = link.href.match(/#\w+/);
-			let top = document.querySelector(id).offsetTop;
-			window.scrollTo({
-				top: top,
-				behavior: 'smooth'
-			});
+		if (link.textContent != 'WhatsApp') {
+			if (link.textContent != 'Связаться') {
+				console.log(link.textContent);
+				e.preventDefault();
+				let id = link.href.match(/#\w+/);
+				let top = document.querySelector(id).offsetTop;
+				window.scrollTo({
+					top: top,
+					behavior: 'smooth'
+				});
+			}
+
 			burger.classList.contains('active') ? burger.click() : null;
 		}
 		burger.classList.contains('active') ? burger.click() : null;
@@ -71,9 +76,15 @@ function showPopup() {
 	popup.classList.add('active');
 	document.body.classList.add('hidden');
 }
-catalogBtn.addEventListener('click', showPopup);
-document.addEventListener('click', e => {
+// catalogBtn.addEventListener('click', showPopup);
+popup.addEventListener('click', e => {
 	if (e.target == closeBtn) {
+		popup.classList.remove('active');
+		document.body.classList.remove('hidden');
+	}
+	if (e.target.closest('.popup-block')) {
+		return;
+	} else {
 		popup.classList.remove('active');
 		document.body.classList.remove('hidden');
 	}

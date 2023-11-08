@@ -6,7 +6,9 @@
 @import '_recomendation';
 @import '_catalog';
 @import '_popup';
-
+@import '_about';
+@import '_reviews';
+@import '_footer';
 body {
 	font-family: 'Roboto';
 	font-weight: normal;
@@ -71,4 +73,8 @@ h6 {
 	&:active {
 		background: #5a5a5a;
 	}
+}
+
+a.btn-tel {
+	display: inline-block;
 }

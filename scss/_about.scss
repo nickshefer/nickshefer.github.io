@@ -1,0 +1,14 @@
+.about {
+}
+
+.about-content {
+	display: flex;
+	gap: 20px;
+}
+.about-text {
+	flex: 0 0 60%;
+}
+.about-img {
+	box-shadow: 0px 0px 2px #000;
+	flex: 0 0 40%;
+}
