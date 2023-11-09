@@ -13,6 +13,7 @@ document.addEventListener('click', e => {
 		return;
 	} else {
 		menu.classList.remove('active');
+		burger.classList.remove('active');
 		document.body.classList.remove('hidden');
 	}
 });
@@ -23,7 +24,6 @@ links.forEach(link => {
 	link.addEventListener('click', e => {
 		if (link.textContent != 'WhatsApp') {
 			if (link.textContent != 'Связаться') {
-				console.log(link.textContent);
 				e.preventDefault();
 				let id = link.href.match(/#\w+/);
 				let top = document.querySelector(id).offsetTop;
@@ -69,14 +69,49 @@ const swiper2 = new Swiper('.swiper2', {
 });
 
 // popup
+import { data } from './data.js';
 const popup = document.querySelector('.popup');
-const catalogBtn = document.querySelector('.catalog-btn');
 const closeBtn = document.querySelector('.popup-header_close');
-function showPopup() {
+const catalog = document.querySelector('.catalog');
+catalog.addEventListener('click', e => {
+	if (e.target.closest('.catalog-company-list-item')) {
+		let img = e.target.closest('.catalog-company-list-item').firstElementChild
+			.firstElementChild.src;
+		let title = e.target
+			.closest('.catalog-company-list-item')
+			.lastElementChild.textContent.trim();
+		showPopup(title, img);
+	}
+});
+function showPopup(title, img) {
+	let boiler = data.find(e => e.title == title);
+	popup.querySelector('.popup-midlle').innerHTML = '';
+	popup.querySelector('.popup-header_title').textContent = title;
+	popup.querySelector('.popup-midlle').insertAdjacentHTML(
+		'beforeend',
+		`
+	<div class="popup-left">
+							<img src="${img}" alt="#" />
+						</div>
+						<div class="popup-right">
+							<ul class="popup-list">
+								${boiler.desc
+									.map(e => {
+										return `<li>
+									<span class="popup-list_title">${e.title}</span>
+									<span class="popup-list_value">${e.value}</span>
+								</li>`;
+									})
+									.join('')}
+							</ul>
+							<p class="popup-description">
+								${boiler.text}
+							</p>
+						</div>`
+	);
 	popup.classList.add('active');
 	document.body.classList.add('hidden');
 }
-// catalogBtn.addEventListener('click', showPopup);
 popup.addEventListener('click', e => {
 	if (e.target == closeBtn) {
 		popup.classList.remove('active');
