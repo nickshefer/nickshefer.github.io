@@ -7,10 +7,9 @@
 	background: rgb(250, 224, 224);
 	box-shadow: 0px 0px 0px 2px red;
 	border-radius: 15px;
-	padding: 10px 20px 10px 40px;
+	padding: 10px 20px;
 	color: #444;
 	font-weight: 500;
-	text-align: justify;
 }
 .handling-warning {
 	display: block;
@@ -34,13 +33,12 @@
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-between;
-	// align-items: center;
 	flex-wrap: wrap;
 	gap: 20px;
 }
 
 .handling-content-item {
-	padding: 10px 20px 10px 40px;
+	padding: 10px 20px;
 	flex: 0 0 48%;
 	position: relative;
 	background: rgb(201, 247, 205);
@@ -48,25 +46,21 @@
 	border-radius: 15px;
 
 	&_title {
+		margin-left: 4px;
+		display: inline-block;
 		color: #444;
 		font-family: Montserrat;
 		font-size: 20px;
 		font-weight: 500;
 	}
 	&_text {
-		text-align: justify;
 		margin: 10px 0px 0px 0px;
 		color: #444;
 		font-weight: 400;
 	}
 }
 .handling-success {
-	display: block;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	top: 10px;
-	left: 10px;
+	width: 18px;
 }
 
 @media (max-width: $md) {
