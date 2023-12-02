@@ -1,4 +1,5 @@
 .handling {
+	margin-bottom: 40px;
 }
 .handling-text {
 	margin-top: 20px;
@@ -46,12 +47,25 @@
 	border-radius: 15px;
 
 	&_title {
-		margin-left: 4px;
-		display: inline-block;
 		color: #444;
 		font-family: Montserrat;
 		font-size: 20px;
 		font-weight: 500;
+		margin: 0;
+		padding-left: 30px;
+		position: relative;
+		&::before {
+			content: '';
+			background-image: url('../assets/success.svg');
+			background-size: cover;
+			display: block;
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			left: 0px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
 	&_text {
 		margin: 10px 0px 0px 0px;
@@ -61,6 +75,9 @@
 }
 .handling-success {
 	width: 18px;
+}
+
+.handling-before {
 }
 
 @media (max-width: $md) {
